@@ -22,11 +22,6 @@ public class LedController {
             GpioController gpioController = GpioFactory.getInstance();
             pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "greenLed", PinState.LOW);
         }
-        TimeUtils.sleepFor(200, TimeUnit.MILLISECONDS);
-        pin.high();
-        TimeUtils.sleepFor(2000, TimeUnit.MILLISECONDS);
-        pin.low();
-        TimeUtils.sleepFor(200, TimeUnit.MILLISECONDS);
         pin.high();
 
         System.out.println("Done");
