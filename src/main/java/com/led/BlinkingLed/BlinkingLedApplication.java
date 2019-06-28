@@ -19,7 +19,7 @@ public class BlinkingLedApplication {
 		GpioController gpioController = GpioFactory.getInstance();
 		greenLed0 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "greenLed0", PinState.LOW);
 		yellowLed0 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_04, "yellowLed0", PinState.LOW);
-		yellowLed0 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_05, "yellowLed1", PinState.LOW);
+		yellowLed1 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_05, "yellowLed1", PinState.LOW);
 		redLed0 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_06, "redLed0", PinState.LOW);
 		redLed1 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_10, "redLed1", PinState.LOW);
 	}
