@@ -1,5 +1,6 @@
 package com.led.BlinkingLed;
 
+import com.led.BlinkingLed.api.LedController;
 import com.pi4j.io.gpio.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,6 +23,12 @@ public class BlinkingLedApplication {
 		yellowLed1 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_05, "yellowLed1", PinState.LOW);
 		redLed0 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_06, "redLed0", PinState.LOW);
 		redLed1 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_10, "redLed1", PinState.LOW);
+
+		Runtime.getRuntime().addShutdownHook(new Thread() {
+			public void run() {
+			LedController.allOff();
+			}
+		});
 	}
 
 
