@@ -1,11 +1,13 @@
 package com.led.BlinkingLed.api;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import static com.led.BlinkingLed.BlinkingLedApplication.*;
 
 @RestController
+@CrossOrigin(origins = "http://192.168.178.37:4200")
 @RequestMapping("/led")
 public class LedController {
 
