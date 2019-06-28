@@ -19,15 +19,10 @@ public class LedController {
             GpioController gpioController = GpioFactory.getInstance();
             pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "greenLed", PinState.LOW);
         }
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.getMessage();
-        }
         pin.high();
 
         System.out.println("Done");
-        return "Turnin led on in 2 seconds";
+        return "Turned led on";
     }
 
     @GetMapping("/off")
@@ -38,14 +33,9 @@ public class LedController {
             pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "greenLed", PinState.LOW);
         }
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.getMessage();
-        }
         pin.low();
 
         System.out.println("Done");
-        return "Turnin led off in 2 seconds";
+        return "Turned led off";
     }
 }
