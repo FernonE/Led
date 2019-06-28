@@ -17,7 +17,7 @@ public class LedController {
         System.out.println("Turning led on");
         if (pin == null){
             GpioController gpioController = GpioFactory.getInstance();
-            pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_18, "greenLed", PinState.LOW);
+            pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "greenLed", PinState.LOW);
         }
 
         pin.high();
@@ -31,7 +31,7 @@ public class LedController {
         System.out.println("Turning led off");
         if (pin == null){
             GpioController gpioController = GpioFactory.getInstance();
-            pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_18, "greenLed", PinState.LOW);
+            pin = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "greenLed", PinState.LOW);
         }
 
         pin.low();
