@@ -9,11 +9,13 @@ import { AppService } from './app.service';
 export class AppComponent {
   title = 'LedWebsite';
 
-  constructor(private appService : AppService)
+  constructor(private appService: AppService) { }
+
 
   TurnOnRedLed1() {
+    console.log("I want to turn on my red led 1")
     this.appService.ServiceTurnOnRedLed1()
   }
 }
-
+ 
 
