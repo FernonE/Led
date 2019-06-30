@@ -10,12 +10,12 @@ export class AppService {
 
   ServiceToggleRedLed0() {
     console.log("redled0 service")
-    return this.http.get("http://212.204.147.203:4201/led/redLed0/toggle")
+    return this.http.get("http://192.168.178.37:9001/led/redLed0/toggle")
   }
 
   ServiceToggleRedLed1() {
     console.log("redled1 service")
-    return this.http.get("http://212.204.147.203:4201/led/redLed1/toggle")
+    return this.http.get("http://192.168.178.37:9001/led/redLed1/toggle")
   }
 
 
