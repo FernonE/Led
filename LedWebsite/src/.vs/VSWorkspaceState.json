@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\Images"
+    "\\assets",
+    "\\environments",
+    "\\images"
   ],
-  "SelectedNode": "\\favicon.ico",
+  "SelectedNode": "\\app\\app.service.ts",
   "PreviewInSolutionExplorer": false
 }

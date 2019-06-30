@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import static com.led.BlinkingLed.BlinkingLedApplication.*;
 
 @RestController
-@CrossOrigin(origins = {"http://192.168.178.37:4200","http://212.204.147.203:4201/"})
+@CrossOrigin(origins = {"http://localhost:4200","http://192.168.178.37:4200","http://212.204.147.203:4201/"})
 @RequestMapping("/led")
 public class LedController {
 
@@ -62,6 +62,24 @@ public class LedController {
         getRedLed1().low();
     }
 
+
+
+    /* toggling the leds */
+    @GetMapping("/greenLed0/toggle")
+    public static void greenLed0Toggle () {
+        getGreenLed0().toggle();
+    }
+
+    @GetMapping("/yellowLed0/toggle")
+    public static void yellowLed0Toggle () {
+        getYellowLed0().toggle();
+    }
+
+    @GetMapping("/yellowLed1/toggle")
+    public static void yellowLed1Toggle () {
+        getYellowLed1().toggle();
+    }
+
     @GetMapping("/redLed0/toggle")
     public static void redLed0Toggle () {
         getRedLed0().toggle();
@@ -69,9 +87,13 @@ public class LedController {
 
     @GetMapping("/redLed1/toggle")
     public static void redLed1Toggle () {
+        System.out.println("in redled1 toggle in java");
         getRedLed1().toggle();
     }
 
+
+
+    /* Turning on and off all */
     @GetMapping("/AllOn")
     public static void allOn (){
         greenLed0On();
