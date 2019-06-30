@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import static com.led.BlinkingLed.BlinkingLedApplication.*;
 
 @RestController
-@CrossOrigin(origins = "http://192.168.178.37:4200")
+@CrossOrigin(origins = {"http://192.168.178.37:4200","http://212.204.147.203:4201/"})
 @RequestMapping("/led")
 public class LedController {
 
@@ -60,6 +60,16 @@ public class LedController {
     @GetMapping("/redLed1/Off")
     public static void redLed1Off () {
         getRedLed1().low();
+    }
+
+    @GetMapping("/redLed0/toggle")
+    public static void redLed0Toggle () {
+        getRedLed0().toggle();
+    }
+
+    @GetMapping("/redLed1/toggle")
+    public static void redLed1Toggle () {
+        getRedLed1().toggle();
     }
 
     @GetMapping("/AllOn")

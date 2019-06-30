@@ -8,8 +8,15 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
 
-  ServiceTurnOnRedLed1() {
-    console.log("now i'm in the service for turning it on")
-    return this.http.get("http://192.168.178.37.4200/led/redLed1/On")
+  ServiceToggleRedLed1() {
+    console.log("redled1 service")
+    return this.http.get("http://192.168.178.37:9001/led/redLed0/toggle")
   }
+
+  ServiceToggleRedLed2() {
+    console.log("redled2 service")
+    return this.http.get("http://192.168.178.37:9001/led/redLed1/toggle")
+  }
+
+
 }

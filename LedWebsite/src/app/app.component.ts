@@ -12,9 +12,14 @@ export class AppComponent {
   constructor(private appService: AppService) { }
 
 
+  ToggleRedLed1() {
+    console.log("toggle red led 1")
+    this.appService.ServiceToggleRedLed1()
+  }
+
   TurnOnRedLed1() {
-    console.log("I want to turn on my red led 1")
-    this.appService.ServiceTurnOnRedLed1()
+    console.log("toggle red led 2")
+    this.appService.ServiceToggleRedLed1()
   }
 }
  
