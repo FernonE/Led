@@ -1,18 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
-  <div style="text-align:center">
-    <h1>
-      This website allows you to turn my leds on or of
-    </h1>
-    <img width="300" alt="My logo" src="./Images/air.JPG">
-    <img width="300" alt="My logo" src="./Images/Jupiter.jpg">
+<div style="text-align:center">
+  <h1>
+    Toggling leds controlled by a Raspberry
+  </h1>
+  <img width="200" alt="My logo" src="./Images/Jupiter.jpg">
 
-    <br />
-    <button type="button" class="btn btn-success">Green LED</button>
-    <button type="button" class="btn btn-warning">Yellow LED 1</button>
-    <button type="button" class="btn btn-warning">Yellow LED 2</button>
-    <button type="button" class="btn btn-danger" (click)="ToggleRedLed0()">Red LED 1</button>
-    <button type="button" class="btn btn-danger" (click)="ToggleRedLed1()">Red LED 2</button>
-  </div>
+</div>
+
+<br>
+<div style="text-align:center">
+  <button type="button" class="btn btn-success button1">Green LED</button>
+  <button type="button" class="btn btn-warning button1">Yellow LED 1</button>
+  <button type="button" class="btn btn-warning button1">Yellow LED 2</button>
+  <button type="button" class="btn btn-danger button1" (click)="ToggleRedLed0()">Red LED 1</button>
+  <button type="button" class="btn btn-danger button1" (click)="ToggleRedLed1()">Red LED 2</button>
+</div>
 
 
 <router-outlet></router-outlet>
+
