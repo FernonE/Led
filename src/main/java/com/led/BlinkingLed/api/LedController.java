@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import static com.led.BlinkingLed.BlinkingLedApplication.*;
+import static com.led.BlinkingLed.model.PinModel.*;
 
 @RestController
 @CrossOrigin(origins = {"http://localhost:4200","http://192.168.178.37:4200","http://212.204.147.203:4201/"})
