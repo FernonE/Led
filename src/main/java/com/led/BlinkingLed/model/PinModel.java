@@ -17,6 +17,7 @@ public class PinModel {
     private static GpioPinDigitalInput button;
 
     public static void main(String[] args) {
+        System.out.println("i've started my gpio controller/pinmodel.class");
 
         GpioController gpioController = GpioFactory.getInstance();
         greenLed0 = gpioController.provisionDigitalOutputPin(RaspiPin.GPIO_01, "greenLed0", PinState.LOW);

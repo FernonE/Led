@@ -59,6 +59,7 @@ public class LedController {
 
     @GetMapping("/redLed1/Off")
     public static void redLed1Off () {
+        System.out.println("I'm turning my led on");
         getRedLed1().low();
     }
 
