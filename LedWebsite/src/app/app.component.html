@@ -8,13 +8,32 @@
 </div>
 
 <br>
-<div style="text-align:center">
-  <button type="button" class="btn btn-success button1" (click)="ToggleGreenLed0()">Green LED</button>
+<div class="card-group">
+  <div style="text-align:center">
+    <!-- Material switch -->
+    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+      <div class="card-header">Green LED 1</div>
+      <div class="custom-control custom-switch ">
+
+        <input type="checkbox" class="custom-control-input" id="customSwitches" (click)="ToggleGreenLed0()">
+        <label class="custom-control-label" for="customSwitches"></label>
+
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <button type="button" class="btn btn-success button1" (click)="ToggleGreenLed0()"></button>
+  <div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="customSwitches">
+    <label class="custom-control-label" for="customSwitches">Green LED 1</label>
+  </div>
+      -->
   <button type="button" class="btn btn-warning button1" (click)="ToggleYellowLed0()">Yellow LED 1</button>
   <button type="button" class="btn btn-warning button1" (click)="ToggleYellowLed1()">Yellow LED 2</button>
   <button type="button" class="btn btn-danger button1" (click)="ToggleRedLed0()">Red LED 1</button>
   <button type="button" class="btn btn-danger button1" (click)="ToggleRedLed1()">Red LED 2</button>
 </div>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
