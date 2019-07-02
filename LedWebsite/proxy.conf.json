@@ -1,5 +1,11 @@
 {
-  "/led/*": {
+  "/led/redLed1/toggle": {
+    "target": "http://localhost:9001",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/led/redLed0/toggle": {
     "target": "http://localhost:9001",
     "secure": false,
     "changeOrigin": true,
