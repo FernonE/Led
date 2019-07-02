@@ -1,5 +1,5 @@
 {
-  "/led/redLed0/toggle": {
+  "/led/*": {
     "target": "http://localhost:9001",
     "secure": false,
     "changeOrigin": true,

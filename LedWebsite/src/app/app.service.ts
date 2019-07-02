@@ -15,7 +15,7 @@ export class AppService {
 
   ServiceToggleRedLed1() {
     console.log("redled1 service")
-    return this.http.get("/led/redLed0/toggle")
+    return this.http.get("/led/redLed1/toggle")
   }
 
 
