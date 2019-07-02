@@ -1,8 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
+  <h3>
     Toggling leds controlled by a Raspberry
-  </h1>
+  </h3>
   <img width="200" alt="My logo" src="./Images/Jupiter.jpg">
 
 </div>
@@ -16,6 +16,11 @@
   <button type="button" class="btn btn-danger button1" (click)="ToggleRedLed1()">Red LED 2</button>
 </div>
 
+<div>
+  <p>
+    {{ErrMssg}}
+  </p>
+</div>
 
 <router-outlet></router-outlet>
 
