@@ -8,6 +8,21 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
 
+  ServiceToggleGreenLed0() {
+    console.log("greenled0 service")
+    return this.http.get("/led/greenLed0/toggle")
+  }
+
+  ServiceToggleYellowLed0() {
+    console.log("yellowled0 service")
+    return this.http.get("/led/yellowLed0/toggle")
+  }
+
+  ServiceToggleYellowLed1() {
+    console.log("yellowled1 service")
+    return this.http.get("/led/yellowLed1/toggle")
+  }
+
   ServiceToggleRedLed0() {
     console.log("redled0 service")
     return this.http.get("/led/redLed0/toggle")
