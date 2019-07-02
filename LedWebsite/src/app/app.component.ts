@@ -11,7 +11,6 @@ export class AppComponent {
 
   constructor(private appService: AppService) { }
 
-
   ToggleRedLed0() {
     console.log("toggle red led 0")
     this.appService.ServiceToggleRedLed0().subscribe()

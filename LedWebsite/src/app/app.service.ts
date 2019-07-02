@@ -15,7 +15,7 @@ export class AppService {
 
   ServiceToggleRedLed1() {
     console.log("redled1 service")
-    return this.http.get("http://192.168.178.37:9001/led/redLed1/toggle")
+    return this.http.get("http://http://localhost:9001/led/redLed1/toggle")
   }
 
 
