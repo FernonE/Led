@@ -14,12 +14,12 @@ export class AppComponent {
 
   ToggleRedLed0() {
     console.log("toggle red led 0")
-    this.appService.ServiceToggleRedLed0()
+    this.appService.ServiceToggleRedLed0().subscribe()
   }
 
   ToggleRedLed1() {
     console.log("toggle red led 1")
-    this.appService.ServiceToggleRedLed1()
+    this.appService.ServiceToggleRedLed1().subscribe()
   }
 }
 
