@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import static com.led.BlinkingLed.BlinkingLedApplication.*;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200","http://192.168.178.37:4200","http://212.204.147.203"})
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/led")
 public class LedController {
 
