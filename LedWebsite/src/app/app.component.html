@@ -8,32 +8,57 @@
 </div>
 
 <br>
-<div class="card-group">
-  <div style="text-align:center">
-    <!-- Material switch -->
-    <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-      <div class="card-header">Green LED 1</div>
-      <div class="custom-control custom-switch ">
-
-        <input type="checkbox" class="custom-control-input" id="customSwitches" (click)="ToggleGreenLed0()">
-        <label class="custom-control-label" for="customSwitches"></label>
-
+<table class="center" style="text-align:center">
+  <tr>
+    <td>
+      <div style="text-align:center">
+        <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+          <div class="card-header">LED 1</div>
+          <div class="custom-control custom-switch ">
+            <input type="checkbox" class="custom-control-input" id="ToggleGreenLed0" (click)="ToggleGreenLed0()">
+            <label class="custom-control-label" for="ToggleGreenLed0"></label>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </td>
+    <td>
+      <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">LED 1</div>
+        <div class="custom-control custom-switch ">
+          <input type="checkbox" class="custom-control-input" id="ToggleYellowLed0" (click)="ToggleYellowLed0()">
+          <label class="custom-control-label" for="ToggleYellowLed0"></label>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+        <div class="card-header">LED 2</div>
+        <div class="custom-control custom-switch ">
+          <input type="checkbox" class="custom-control-input" id="ToggleYellowLed1" (click)="ToggleYellowLed1()">
+          <label class="custom-control-label" for="ToggleYellowLed1"></label>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">LED 1</div>
+        <div class="custom-control custom-switch ">
+          <input type="checkbox" class="custom-control-input" id="ToggleRedLed0" (click)="ToggleRedLed0()">
+          <label class="custom-control-label" for="ToggleRedLed0"></label>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div class="card-header">LED 2</div>
+        <div class="custom-control custom-switch ">
+          <input type="checkbox" class="custom-control-input" id="ToggleRedLed1" (click)="ToggleRedLed1()">
+          <label class="custom-control-label" for="ToggleRedLed1"></label>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
 
-  <!--
-  <button type="button" class="btn btn-success button1" (click)="ToggleGreenLed0()"></button>
-  <div class="custom-control custom-switch">
-    <input type="checkbox" class="custom-control-input" id="customSwitches">
-    <label class="custom-control-label" for="customSwitches">Green LED 1</label>
-  </div>
-      -->
-  <button type="button" class="btn btn-warning button1" (click)="ToggleYellowLed0()">Yellow LED 1</button>
-  <button type="button" class="btn btn-warning button1" (click)="ToggleYellowLed1()">Yellow LED 2</button>
-  <button type="button" class="btn btn-danger button1" (click)="ToggleRedLed0()">Red LED 1</button>
-  <button type="button" class="btn btn-danger button1" (click)="ToggleRedLed1()">Red LED 2</button>
-</div>
-
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 

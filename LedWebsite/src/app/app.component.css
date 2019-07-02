@@ -1,3 +1,8 @@
 .button1 {
   width: 120px;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+}
