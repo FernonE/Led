@@ -87,11 +87,11 @@ export class AppComponent {
   }
 
   resetLed() {
-    this.timer = this.countdown
     if (this.countdownStarted) {
       this.timer = this.countdown
     }
     else {
+      this.timer = this.countdown
       let intervalId = setInterval(() => {
         this.countdownStarted = true;
         this.timer = this.timer - 1;
