@@ -24,7 +24,7 @@ export class AppComponent {
       console.log(this.booleanLed)
       
     })
-    console.log(this.booleanLed)
+    console.log("hello???",this.booleanLed)
       
 
     if (this.appService.GetGreenLed0().subscribe()) {
