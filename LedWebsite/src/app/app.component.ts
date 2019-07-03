@@ -21,6 +21,14 @@ export class AppComponent {
 
 
   ngOnInit() {
+    setInterval(() => {
+      this.CheckLeds()
+    },100)
+  }
+
+  constructor(private appService: AppService) { }
+
+  CheckLeds() {
     this.appService.GetGreenLed0().subscribe(x => {
       this.GreenLed0Status = x;
       (<HTMLInputElement>document.getElementById("GreenLed0")).checked = this.GreenLed0Status;
@@ -42,8 +50,6 @@ export class AppComponent {
       (<HTMLInputElement>document.getElementById("RedLed1")).checked = this.RedLed1Status;
     })
   }
-
-  constructor(private appService: AppService) { }
 
   ToggleGreenLed0() {
     console.log("toggle Green led 0")
