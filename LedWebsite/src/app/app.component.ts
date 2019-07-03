@@ -9,6 +9,11 @@ import { AppService } from './app.service';
 export class AppComponent {
   title = 'LedWebsite';
 
+  countdown: number = 30
+  timer: number = this.countdown
+  counter: number = this.countdown
+  timeoutSentence: string
+
   constructor(private appService: AppService) { }
 
   ToggleGreenLed0() {
@@ -34,6 +39,27 @@ export class AppComponent {
   ToggleRedLed1() {
     console.log("toggle red led 1")
     this.appService.ServiceToggleRedLed1().subscribe()
+    this.resetLed(this.counter)
+  }
+
+  resetLed(counting) {
+    this.timer = this.countdown
+    let intervalId = setInterval(() => {
+      if (this.counter !== this.timer) {
+        this.counter = this.countdown;
+        clearInterval(intervalId)
+      }
+      else {
+        this.timer = this.timer - 1;
+        this.counter = this.timer;
+        this.timeoutSentence = `Turning all leds of again in ${this.timer} seconds`
+        if (this.timer === 0) {
+          this.counter = this.countdown
+          this.timeoutSentence = ''
+          clearInterval(intervalId)
+        }
+      }
+    }, 1000)  
   }
 }
 
