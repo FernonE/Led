@@ -1,5 +1,6 @@
 package com.led.BlinkingLed.api;
 
+import com.pi4j.io.gpio.PinState;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,16 @@ import static com.led.BlinkingLed.BlinkingLedApplication.*;
 @RequestMapping("/led")
 public class LedController {
 
+    /* Checking status of led */
+
+    @GetMapping("/greenLed0")
+    public static boolean greenLed0 () {
+        if (getGreenLed0().getState() == PinState.HIGH) return true;
+        else return false;
+    }
+        
+
+    /* turning the leds on and off */
     @GetMapping("/greenLed0/On")
     public static void greenLed0On (){
         getGreenLed0().high();
@@ -61,8 +72,6 @@ public class LedController {
     public static void redLed1Off () {
         getRedLed1().low();
     }
-
-
 
     /* toggling the leds */
     @GetMapping("/greenLed0/toggle")

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
 
 @Component({
@@ -13,6 +13,17 @@ export class AppComponent {
   timer: number = this.countdown
   counter: number = this.countdown
   timeoutSentence: string
+  text
+
+
+  ngOnInit() {
+    this.text = this.appService.GetGreenLed0().subscribe()
+    
+    if (this.appService.GetGreenLed0().subscribe()) {
+      (<HTMLInputElement>document.getElementById("GreenLed0")).checked = true;
+    }
+
+  }
 
   constructor(private appService: AppService) { }
 
