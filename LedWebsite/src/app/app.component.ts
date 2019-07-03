@@ -23,7 +23,7 @@ export class AppComponent {
   ngOnInit() {
     setInterval(() => {
       this.CheckLeds()
-    },50)
+    },1000)
   }
 
   constructor(private appService: AppService) { }
@@ -54,30 +54,35 @@ export class AppComponent {
   ToggleGreenLed0() {
     console.log("toggle Green led 0")
     this.appService.ServiceToggleGreenLed0().subscribe()
+    this.CheckLeds()
     this.resetLed()
   }
 
   ToggleYellowLed0() {
     console.log("toggle Yellow led 0")
     this.appService.ServiceToggleYellowLed0().subscribe()
+    this.CheckLeds()
     this.resetLed()
   }
 
   ToggleYellowLed1() {
     console.log("toggle Yellow led 1")
     this.appService.ServiceToggleYellowLed1().subscribe()
+    this.CheckLeds()
     this.resetLed()
   }
 
   ToggleRedLed0() {
     console.log("toggle red led 0")
     this.appService.ServiceToggleRedLed0().subscribe()
+    this.CheckLeds()
     this.resetLed()
   }
 
   ToggleRedLed1() {
     console.log("toggle red led 1")
     this.appService.ServiceToggleRedLed1().subscribe()
+    this.CheckLeds()
     this.resetLed()
   }
 
