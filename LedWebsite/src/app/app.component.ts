@@ -71,7 +71,12 @@ export class AppComponent {
         if (this.timer <= 0) {
           this.countdownStarted = false
           this.timeoutSentence = ''
-          this.appService.ServiceTurnOffAll().subscribe()
+          this.appService.ServiceTurnOffAll().subscribe();
+          (<HTMLInputElement>document.getElementById("GreenLed0")).checked = false;
+          (<HTMLInputElement>document.getElementById("YellowLed0")).checked = false;
+          (<HTMLInputElement>document.getElementById("YellowLed1")).checked = false;
+          (<HTMLInputElement>document.getElementById("RedLed0")).checked = false;
+          (<HTMLInputElement>document.getElementById("RedLed1")).checked = false;
           clearInterval(intervalId)
           }
       }, 1000)
