@@ -23,6 +23,7 @@ export class AppComponent {
     this.appService.GetGreenLed0().subscribe(booleanLed => this.booleanLed = booleanLed)
     console.log("printing booleanLed")
     console.log(this.booleanLed)
+    console.log(booleanLed)
 
     if (this.appService.GetGreenLed0().subscribe()) {
       (<HTMLInputElement>document.getElementById("GreenLed0")).checked = true;
