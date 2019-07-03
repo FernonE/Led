@@ -13,7 +13,7 @@ export class AppComponent {
   timer: number = this.countdown
   counter: number = this.countdown
   timeoutSentence: string
-  booleanLed: boolean
+  booleanLed
 
 
   ngOnInit() {
