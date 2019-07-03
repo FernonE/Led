@@ -20,7 +20,7 @@ public class LedController {
         if (getGreenLed0().getState() == PinState.HIGH) return true;
         else return false;
     }
-        
+
 
     /* turning the leds on and off */
     @GetMapping("/greenLed0/On")
