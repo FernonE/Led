@@ -17,8 +17,9 @@ export class AppComponent {
 
 
   ngOnInit() {
-    this.appService.GetGreenLed0().subscribe(booleanLed => this.booleanLed = <boolean>booleanLed)
+    this.appService.GetGreenLed0().subscribe(booleanLed => this.booleanLed = booleanLed)
     console.log(this.booleanLed)
+
     if (this.appService.GetGreenLed0().subscribe()) {
       (<HTMLInputElement>document.getElementById("GreenLed0")).checked = true;
     }
