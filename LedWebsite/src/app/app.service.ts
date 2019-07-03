@@ -40,5 +40,10 @@ export class AppService {
     return this.http.get("/led/redLed1/toggle")
   }
 
+  ServiceTurnOffAll() {
+    console.log("turning off all leds")
+    return this.http.get("/led/AllOff")
+  }
+
 
 }

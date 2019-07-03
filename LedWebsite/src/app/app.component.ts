@@ -9,9 +9,9 @@ import { AppService } from './app.service';
 export class AppComponent {
   title = 'LedWebsite';
 
-  countdown: number = 30
+  countdown: number = 10
   timer: number = this.countdown
-  counter: number = this.countdown
+  countdownStarted: boolean = false;
   timeoutSentence: string
   booleanLed
 
@@ -31,51 +31,51 @@ export class AppComponent {
   ToggleGreenLed0() {
     console.log("toggle Green led 0")
     this.appService.ServiceToggleGreenLed0().subscribe()
-    this.resetLed(this.counter)
+    this.resetLed()
   }
 
   ToggleYellowLed0() {
     console.log("toggle Yellow led 0")
     this.appService.ServiceToggleYellowLed0().subscribe()
-    this.resetLed(this.counter)
+    this.resetLed()
   }
 
   ToggleYellowLed1() {
     console.log("toggle Yellow led 1")
     this.appService.ServiceToggleYellowLed1().subscribe()
-    this.resetLed(this.counter)
+    this.resetLed()
   }
 
   ToggleRedLed0() {
     console.log("toggle red led 0")
     this.appService.ServiceToggleRedLed0().subscribe()
-    this.resetLed(this.counter)
+    this.resetLed()
   }
 
   ToggleRedLed1() {
     console.log("toggle red led 1")
     this.appService.ServiceToggleRedLed1().subscribe()
-    this.resetLed(this.counter)
+    this.resetLed()
   }
 
-  resetLed(counting) {
+  resetLed() {
     this.timer = this.countdown
-    let intervalId = setInterval(() => {
-      if (this.counter !== this.timer) {
-        this.counter = this.countdown;
-        clearInterval(intervalId)
-      }
-      else {
+    if (this.countdownStarted) {
+      this.timer = this.countdown
+    }
+    else {
+      let intervalId = setInterval(() => {
+        this.countdownStarted = true;
         this.timer = this.timer - 1;
-        this.counter = this.timer;
-        this.timeoutSentence = `Turning all leds of again in ${this.timer} seconds`
-        if (this.timer === 0) {
-          this.counter = this.countdown
+        this.timeoutSentence = `Turning all leds off in ${this.timer} seconds`
+        if (this.timer <= 0) {
+          this.countdownStarted = false
           this.timeoutSentence = ''
+          this.appService.ServiceTurnOffAll.subscribe()
           clearInterval(intervalId)
-        }
-      }
-    }, 1000)  
+          }
+      }, 1000)
+    }
   }
 }
 
