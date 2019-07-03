@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
+import { booleanReturn } from './booleanReturn';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +12,9 @@ export class AppComponent {
 
   countdown: number = 11
   timer: number = this.countdown
-  countdownStarted: boolean = false;
+  countdownStarted: boolean = false
   timeoutSentence: string
-  booleanLed
+  booleanLed: booleanReturn
 
 
   ngOnInit() {
@@ -23,7 +24,7 @@ export class AppComponent {
     this.appService.GetGreenLed0().subscribe(booleanLed => this.booleanLed = booleanLed)
     console.log("printing booleanLed")
     console.log(this.booleanLed)
-    console.log(booleanLed)
+
 
     if (this.appService.GetGreenLed0().subscribe()) {
       (<HTMLInputElement>document.getElementById("GreenLed0")).checked = true;
