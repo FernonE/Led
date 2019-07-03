@@ -14,15 +14,15 @@ export class AppComponent {
   timer: number = this.countdown
   countdownStarted: boolean = false
   timeoutSentence: string
-  booleanLed: booleanReturn
+  booleanLed: boolean
 
 
   ngOnInit() {
     this.appService.GetGreenLed0().subscribe(x => {
       this.booleanLed = x
       console.log("printing booleanLed")
-      console.log(this.booleanLed)
-      
+      console.log(this.booleanLed);
+      (<HTMLInputElement>document.getElementById("GreenLed0")).checked = this.booleanLed;
     })
     console.log("hello???",this.booleanLed)
       
