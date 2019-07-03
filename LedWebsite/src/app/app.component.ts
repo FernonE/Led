@@ -22,8 +22,9 @@ export class AppComponent {
       this.booleanLed = x
       console.log("printing booleanLed")
       console.log(this.booleanLed)
-      console.log(x)
+      
     })
+    console.log(this.booleanLed)
       
 
     if (this.appService.GetGreenLed0().subscribe()) {
