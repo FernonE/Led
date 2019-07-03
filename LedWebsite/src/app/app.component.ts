@@ -19,21 +19,25 @@ export class AppComponent {
   ToggleGreenLed0() {
     console.log("toggle Green led 0")
     this.appService.ServiceToggleGreenLed0().subscribe()
+    this.resetLed(this.counter)
   }
 
   ToggleYellowLed0() {
     console.log("toggle Yellow led 0")
     this.appService.ServiceToggleYellowLed0().subscribe()
+    this.resetLed(this.counter)
   }
 
   ToggleYellowLed1() {
     console.log("toggle Yellow led 1")
     this.appService.ServiceToggleYellowLed1().subscribe()
+    this.resetLed(this.counter)
   }
 
   ToggleRedLed0() {
     console.log("toggle red led 0")
     this.appService.ServiceToggleRedLed0().subscribe()
+    this.resetLed(this.counter)
   }
 
   ToggleRedLed1() {
