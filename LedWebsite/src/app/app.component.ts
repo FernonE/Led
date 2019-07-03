@@ -17,7 +17,11 @@ export class AppComponent {
 
 
   ngOnInit() {
+    var x = this.appService.GetGreenLed0().subscribe()
+    console.log("printing x")
+    console.log(x)
     this.appService.GetGreenLed0().subscribe(booleanLed => this.booleanLed = booleanLed)
+    console.log("printing booleanLed")
     console.log(this.booleanLed)
 
     if (this.appService.GetGreenLed0().subscribe()) {

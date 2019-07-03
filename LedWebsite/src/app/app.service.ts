@@ -1,16 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { booleanReturn } from './booleanReturn';
 
 @Injectable({
   providedIn: 'root'
 })
+
+@Injectable()
 export class AppService {
 
   constructor(private http: HttpClient) { }
 
-  GetGreenLed0() {
+  GetGreenLed0() : Observable<booleanReturn>{
     console.log("Getting green led status")
-    return this.http.get("/led/greenLed0")
+    return this.http.get<booleanReturn>("/led/greenLed0")
   }
 
   ServiceToggleGreenLed0() {
