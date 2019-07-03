@@ -9,7 +9,7 @@ import { AppService } from './app.service';
 export class AppComponent {
   title = 'LedWebsite';
 
-  countdown: number = 10
+  countdown: number = 11
   timer: number = this.countdown
   countdownStarted: boolean = false;
   timeoutSentence: string
@@ -71,7 +71,7 @@ export class AppComponent {
         if (this.timer <= 0) {
           this.countdownStarted = false
           this.timeoutSentence = ''
-          this.appService.ServiceTurnOffAll.subscribe()
+          this.appService.ServiceTurnOffAll().subscribe()
           clearInterval(intervalId)
           }
       }, 1000)
