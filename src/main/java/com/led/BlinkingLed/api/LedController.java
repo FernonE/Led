@@ -21,6 +21,29 @@ public class LedController {
         else return false;
     }
 
+    @GetMapping("/yellowLed0")
+    public static boolean yellowLed0 () {
+        if (getYellowLed0().getState() == PinState.HIGH) return true;
+        else return false;
+    }
+
+    @GetMapping("/yellowLed1")
+    public static boolean yellowLed1 () {
+        if (getYellowLed1().getState() == PinState.HIGH) return true;
+        else return false;
+    }
+
+    @GetMapping("/RedLed0")
+    public static boolean RedLed0 () {
+        if (getRedLed0().getState() == PinState.HIGH) return true;
+        else return false;
+    }
+
+    @GetMapping("/RedLed1")
+    public static boolean RedLed1 () {
+        if (getRedLed1().getState() == PinState.HIGH) return true;
+        else return false;
+    }
 
     /* turning the leds on and off */
     @GetMapping("/greenLed0/On")

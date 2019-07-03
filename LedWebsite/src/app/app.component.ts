@@ -25,19 +25,19 @@ export class AppComponent {
       this.GreenLed0Status = x;
       (<HTMLInputElement>document.getElementById("GreenLed0")).checked = this.GreenLed0Status;
     })
-    this.appService.GetGreenLed0().subscribe(x => {
+    this.appService.GetYellowLed0().subscribe(x => {
       this.YellowLed0Status = x;
       (<HTMLInputElement>document.getElementById("YellowLed0")).checked = this.YellowLed0Status;
     })
-    this.appService.GetGreenLed0().subscribe(x => {
+    this.appService.GetYellowLed1().subscribe(x => {
       this.YellowLed1Status = x;
       (<HTMLInputElement>document.getElementById("YellowLed1")).checked = this.YellowLed1Status;
     })
-    this.appService.GetGreenLed0().subscribe(x => {
+    this.appService.GetRedLed0().subscribe(x => {
       this.RedLed0Status = x;
       (<HTMLInputElement>document.getElementById("RedLed0")).checked = this.RedLed0Status;
     })
-    this.appService.GetGreenLed0().subscribe(x => {
+    this.appService.GetRedLed1().subscribe(x => {
       this.RedLed1Status = x;
       (<HTMLInputElement>document.getElementById("RedLed1")).checked = this.RedLed1Status;
     })

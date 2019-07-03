@@ -13,17 +13,31 @@ export class AppService {
   constructor(private http: HttpClient) { }
 
   GetGreenLed0() : Observable<boolean>{
-    console.log("Getting green led status")
     return this.http.get<boolean>("/led/greenLed0")
   }
+
+  GetYellowLed0(): Observable<boolean> {
+    return this.http.get<boolean>("/led/yellowLed0")
+  }
+
+  GetYellowLed1(): Observable<boolean> {
+    return this.http.get<boolean>("/led/yellowLed1")
+  }
+
+  GetRedLed0(): Observable<boolean> {
+    return this.http.get<boolean>("/led/RedLed0")
+  }
+
+  GetRedLed1(): Observable<boolean> {
+    return this.http.get<boolean>("/led/RedLed1")
+  }
+
 
   ServiceToggleGreenLed0() {
     console.log("greenled0 service")
     return this.http.get("/led/greenLed0/toggle")
   }
-
-
-
+   
   ServiceToggleYellowLed0() {
     console.log("yellowled0 service")
     return this.http.get("/led/yellowLed0/toggle")
