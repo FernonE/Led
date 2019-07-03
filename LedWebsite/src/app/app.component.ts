@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from './app.service';
-import { booleanReturn } from './booleanReturn';
 
 @Component({
   selector: 'app-root',
@@ -14,23 +13,34 @@ export class AppComponent {
   timer: number = this.countdown
   countdownStarted: boolean = false
   timeoutSentence: string
-  booleanLed: boolean
+  GreenLed0Status: boolean
+  YellowLed0Status: boolean
+  YellowLed1Status: boolean
+  RedLed0Status: boolean
+  RedLed1Status: boolean
 
 
   ngOnInit() {
     this.appService.GetGreenLed0().subscribe(x => {
-      this.booleanLed = x
-      console.log("printing booleanLed")
-      console.log(this.booleanLed);
-      (<HTMLInputElement>document.getElementById("GreenLed0")).checked = this.booleanLed;
+      this.GreenLed0Status = x;
+      (<HTMLInputElement>document.getElementById("GreenLed0")).checked = this.GreenLed0Status;
     })
-    console.log("hello???",this.booleanLed)
-      
-
-    if (this.appService.GetGreenLed0().subscribe()) {
-      (<HTMLInputElement>document.getElementById("GreenLed0")).checked = false;
-    }
-
+    this.appService.GetGreenLed0().subscribe(x => {
+      this.YellowLed0Status = x;
+      (<HTMLInputElement>document.getElementById("YellowLed0")).checked = this.YellowLed0Status;
+    })
+    this.appService.GetGreenLed0().subscribe(x => {
+      this.YellowLed1Status = x;
+      (<HTMLInputElement>document.getElementById("YellowLed1")).checked = this.YellowLed1Status;
+    })
+    this.appService.GetGreenLed0().subscribe(x => {
+      this.RedLed0Status = x;
+      (<HTMLInputElement>document.getElementById("RedLed0")).checked = this.RedLed0Status;
+    })
+    this.appService.GetGreenLed0().subscribe(x => {
+      this.RedLed1Status = x;
+      (<HTMLInputElement>document.getElementById("RedLed1")).checked = this.RedLed1Status;
+    })
   }
 
   constructor(private appService: AppService) { }
