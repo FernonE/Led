@@ -21,9 +21,11 @@ export class AppComponent {
 
 
   ngOnInit() {
+    /*
     setInterval(() => {
       this.CheckLeds()
     },1000)
+    */
   }
 
   constructor(private appService: AppService) { }
